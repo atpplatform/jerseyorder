@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SG P.2/7 Football Jersey Order</title>
-  <style>
-    body { margin: 0; }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
-</head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbxo-TUJsimTQpOdyRewGxZZ9DkpI5GvoJNBtwuDmzbpvZdIVWasx1BYZWTI8skEQlUBmg/exec"></iframe>
+  <h1>My App</h1>
+  <div id="result"></div>
+
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbxo-TUJsimTQpOdyRewGxZZ9DkpI5GvoJNBtwuDmzbpvZdIVWasx1BYZWTI8skEQlUBmg/exec")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("result").innerText = data.message;
+      });
+  </script>
 </body>
 </html>
